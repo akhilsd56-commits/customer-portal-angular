@@ -19,7 +19,7 @@ export class CustomerListComponent implements OnInit {
 
   ngOnInit(): void {
     this.customerService.getCustomers().subscribe({
-      next: data => {
+      next: (data) => {
         this.customers = data.map(user => user.name);
         this.loading = false;
       },
